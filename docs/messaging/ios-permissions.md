@@ -80,7 +80,7 @@ For example:
 import messaging from '@react-native-firebase/messaging';
 
 async function checkApplicationPermission() {
-  const authorizationStatus = await messaging().requestPermission();
+  const authorizationStatus = await messaging().hasPermission();
 
   if (authorizationStatus === messaging.AuthorizationStatus.AUTHORIZED) {
     console.log('User has notification permissions enabled.');
